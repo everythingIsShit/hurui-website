@@ -88,7 +88,6 @@ export default {
   }
 }
 .filter {
-  height: 50px;
   padding: 9px 0;
   background: #fff;
   box-sizing: border-box;
@@ -98,15 +97,18 @@ export default {
   .van-grid:after {
     border-width: 0;
   }
-  .van-grid-item:after {
-    border-width: 0 1px 0;
-    border-color: #ddd;
-  }
   /deep/ .van-grid-item__content {
     padding: 0;
+    &:after {
+      border-width: 0 1px 0 0;
+      border-color: #ddd;
+    }
   }
   /deep/ .van-cell {
-    padding: 0 4px;
+    padding: 0 10px;
+    &:after {
+      border-width: 0;
+    }
   }
 }
 </style>
